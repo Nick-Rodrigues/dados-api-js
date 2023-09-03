@@ -1,5 +1,7 @@
-var consultaCEP = fetch('https://viacep.com.br/ws/01001000/json/')
-.then(resposta => resposta.json())
-.then(r => console.log(r));
+async function buscaEndereco(){
+    var consultaCEP = await fetch('https://viacep.com.br/ws/09060140/json/')
+    var consultaCEPConvertida = await consultaCEP.json();
+    console.log(consultaCEPConvertida);
+}
 
-console.log(consultaCEP);
+buscaEndereco();
